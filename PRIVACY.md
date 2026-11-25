@@ -1,6 +1,6 @@
 # Política de privacidad de Polaris GPS
 
-*Última actualización: 5 de noviembre de 2026* · [English below](#privacy-policy-of-polaris-gps)
+*Última actualización: 25 de noviembre de 2026* · [English below](#privacy-policy-of-polaris-gps)
 
 Polaris GPS es una aplicación de escritorio de Mendikat. **No envía datos personales a Mendikat salvo que conectes tu
 cuenta de Mendikat o le envíes un track**, y solo lo necesario para eso. No hay publicidad, telemetría, analítica ni
@@ -29,6 +29,8 @@ Conectar una cuenta de Mendikat es opcional y solo hace falta para _Comunicacion
   con tu nombre de usuario. Desde ese momento Mendikat trata el track como cualquier otro que publiques en la web,
   según la política de privacidad de [www.mendikat.net](https://www.mendikat.net); puedes borrarlo desde la web.
 
+_Buscar › Buscar cumbre en Mendikat_ no necesita cuenta: solo envía a mendikat.net el texto que buscas.
+
 ## Conexiones a servicios de terceros
 
 Para algunas funciones la aplicación se conecta a servicios públicos de terceros. Estos servicios reciben tu dirección
@@ -41,7 +43,7 @@ IP, la versión de la aplicación (en el encabezado *User-Agent*) y lo que hace 
 | Cálculo de rutas | BRouter (brouter.de) | Los puntos de la ruta que dibujas |
 | Buscar un lugar | Nominatim de OpenStreetMap | El texto que buscas y la zona visible del mapa |
 | Conectar con Google (solo si lo eliges) | Google | El inicio de sesión que haces en el navegador |
-| Buscar actualizaciones (solo cuando la eliges en el menú) | GitHub | Ninguno: solo se consulta la última versión publicada |
+| Buscar actualizaciones (al abrir la aplicación, salvo que lo desactives en Archivo › Configuración › General, y cuando la eliges en el menú; no en la versión de Microsoft Store) | GitHub | Ninguno: solo se consulta la última versión publicada |
 | Cartografía en línea ECWP | El servidor cuya dirección escribes | La zona que ves en el mapa |
 
 Mendikat no recibe ni guarda estos datos. Cada servicio los trata según su propia política de privacidad. Si no usas
@@ -60,7 +62,7 @@ Si esta política cambia, se publicará aquí con su nueva fecha. Para cualquier
 
 # Privacy policy of Polaris GPS
 
-*Last updated: 5 November 2026*
+*Last updated: 25 November 2026*
 
 Polaris GPS is a desktop application by Mendikat. **It does not send any personal data to Mendikat unless you connect
 your Mendikat account or send it a track**, and then only what that needs. There is no advertising, telemetry,
@@ -89,6 +91,8 @@ Connecting a Mendikat account is optional and only needed for _Communications �
   under your user name. From then on Mendikat handles the track like any other you publish on the website, under the
   privacy policy of [www.mendikat.net](https://www.mendikat.net); you can delete it from the website.
 
+_Search › Search a summit in Mendikat_ needs no account: it only sends mendikat.net the text you search for.
+
 ## Connections to third-party services
 
 Some features connect to public third-party services. These services receive your IP address, the application version
@@ -101,7 +105,7 @@ Some features connect to public third-party services. These services receive you
 | Route calculation | BRouter (brouter.de) | The points of the route you draw |
 | Place search | OpenStreetMap Nominatim | The text you search for and the area shown on the map |
 | Connect with Google (only if you choose it) | Google | The sign-in you make in the browser |
-| Check for updates (only when chosen in the menu) | GitHub | Nothing: only the latest published version is read |
+| Check for updates (when the application starts, unless turned off in File › Settings › General, and when chosen in the menu; not in the Microsoft Store version) | GitHub | Nothing: only the latest published version is read |
 | ECWP online maps | The server whose address you type | The area shown on the map |
 
 Mendikat does not receive or store this data. Each service handles it under its own privacy policy. If you do not use
