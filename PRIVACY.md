@@ -15,19 +15,26 @@ informes de errores automáticos.
 
 ## Cuenta de Mendikat y envío de tracks
 
-Conectar una cuenta de Mendikat es opcional y solo hace falta para _Comunicaciones › Enviar a Mendikat_.
+Conectar una cuenta de Mendikat es opcional y solo hace falta para enviar tracks o cumbres a Mendikat y, si eres
+donante, para buscar tracks de Mendikat.
 
 - **Al conectar con usuario y contraseña**, la aplicación los envía a mendikat.net por una conexión cifrada (HTTPS)
   para obtener un permiso de acceso. La contraseña no se guarda.
 - **Al conectar con Google**, inicias sesión en Google en tu navegador. Google entrega a la aplicación un permiso para
   leer tu nombre y tu dirección de correo, que se envía a mendikat.net para identificar tu cuenta (o crearla si no
   existe). Ni la aplicación ni Mendikat reciben tu contraseña de Google.
-- **En tu equipo** se guardan el permiso de acceso de Mendikat y tu usuario, nombre y correo, en el Administrador de
-  credenciales de Windows, cifrados por Windows para tu usuario. **Desconectar** los borra.
+- **En tu equipo** se guardan el permiso de acceso de Mendikat y tu usuario, nombre, correo y, si eres donante, la
+  fecha de fin de tu donación, en el Administrador de credenciales de Windows, cifrados por Windows para tu usuario.
+  **Desconectar** los borra.
 - **Al enviar un track**, la aplicación envía a mendikat.net la posición de algunos puntos del track, para buscar las
   cumbres próximas, y después el archivo GPX con la descripción que elijas, que se publica en las cumbres que marques
   con tu nombre de usuario. Desde ese momento Mendikat trata el track como cualquier otro que publiques en la web,
   según la política de privacidad de [www.mendikat.net](https://www.mendikat.net); puedes borrarlo desde la web.
+
+- **Al buscar tracks de Mendikat en la zona visible** (solo para donantes), la aplicación envía a mendikat.net, con tu
+  permiso de acceso, los límites de la zona del mapa que estás viendo. Mendikat comprueba con tu cuenta si tienes una
+  donación vigente y, si la fecha guardada ha pasado, la aplicación le pregunta de nuevo por si la has renovado. Los
+  tracks que abres se descargan de mendikat.net.
 
 _Buscar › Buscar cumbre en Mendikat_ no necesita cuenta: solo envía a mendikat.net el texto que buscas.
 
@@ -42,6 +49,7 @@ IP, la versión de la aplicación (en el encabezado *User-Agent*) y lo que hace 
 | Altitudes (modelo digital del terreno) | IGN de España (servicios.idee.es) | La zona de los puntos cuya altitud se calcula |
 | Cálculo de rutas | BRouter (brouter.de) | Los puntos de la ruta que dibujas |
 | Buscar un lugar | Nominatim de OpenStreetMap | El texto que buscas y la zona visible del mapa |
+| Previsión meteorológica sobre el mapa (salvo que la desactives en Archivo › Configuración › Meteorología) | Open-Meteo (open-meteo.com) | La posición del centro del mapa, redondeada a 1 km |
 | Conectar con Google (solo si lo eliges) | Google | El inicio de sesión que haces en el navegador |
 | Buscar actualizaciones (al abrir la aplicación, salvo que lo desactives en Archivo › Configuración › General, y cuando la eliges en el menú; no en la versión de Microsoft Store) | GitHub | Ninguno: solo se consulta la última versión publicada |
 | Cartografía en línea ECWP | El servidor cuya dirección escribes | La zona que ves en el mapa |
@@ -77,19 +85,26 @@ analytics or automatic error reports.
 
 ## Mendikat account and sending tracks
 
-Connecting a Mendikat account is optional and only needed for _Communications › Send to Mendikat_.
+Connecting a Mendikat account is optional and only needed to send tracks or summits to Mendikat and, for donors, to
+search Mendikat tracks.
 
 - **When you connect with your user name and password**, the application sends them to mendikat.net over an encrypted
   connection (HTTPS) to obtain an access permission. The password is not stored.
 - **When you connect with Google**, you sign in to Google in your browser. Google gives the application a permission
   to read your name and e-mail address, which is sent to mendikat.net to identify your account (or create it if it
   does not exist). Neither the application nor Mendikat receives your Google password.
-- **On your computer**, the Mendikat access permission and your user name, name and e-mail are stored in the Windows
-  Credential Manager, encrypted by Windows for your user. **Disconnect** deletes them.
+- **On your computer**, the Mendikat access permission and your user name, name, e-mail and, for donors, the end date
+  of your donation are stored in the Windows Credential Manager, encrypted by Windows for your user. **Disconnect**
+  deletes them.
 - **When you send a track**, the application sends mendikat.net the position of some points of the track, to find the
   nearby summits, and then the GPX file with the description you choose, which is published on the summits you check
   under your user name. From then on Mendikat handles the track like any other you publish on the website, under the
   privacy policy of [www.mendikat.net](https://www.mendikat.net); you can delete it from the website.
+
+- **When you search Mendikat tracks in the visible area** (donors only), the application sends mendikat.net, with your
+  access permission, the bounds of the part of the map you are viewing. Mendikat checks with your account whether you
+  have a current donation and, once the saved date has passed, the application asks again in case you renewed it. The
+  tracks you open are downloaded from mendikat.net.
 
 _Search › Search a summit in Mendikat_ needs no account: it only sends mendikat.net the text you search for.
 
@@ -104,6 +119,7 @@ Some features connect to public third-party services. These services receive you
 | Elevations (digital terrain model) | IGN Spain (servicios.idee.es) | The area of the points whose elevation is computed |
 | Route calculation | BRouter (brouter.de) | The points of the route you draw |
 | Place search | OpenStreetMap Nominatim | The text you search for and the area shown on the map |
+| Weather forecast on the map (unless turned off in File › Settings › Weather) | Open-Meteo (open-meteo.com) | The position of the centre of the map, rounded to 1 km |
 | Connect with Google (only if you choose it) | Google | The sign-in you make in the browser |
 | Check for updates (when the application starts, unless turned off in File › Settings › General, and when chosen in the menu; not in the Microsoft Store version) | GitHub | Nothing: only the latest published version is read |
 | ECWP online maps | The server whose address you type | The area shown on the map |

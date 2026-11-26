@@ -4,7 +4,7 @@
 
 Polaris GPS es un editor de tracks y waypoints para Windows, pensado para montaña. Abre tus archivos GPX (y los de Google Earth, Garmin, OziExplorer o CompeGPS/TwoNav), los muestra sobre el mapa del IGN y muchas otras cartografías, y te permite revisarlos, corregirlos, dibujar recorridos nuevos, pasarlos al GPS y compartirlos en Mendikat. Es gratuito.
 
-**Versión actual: 1.1.1** · [Descargar](https://github.com/mendikat/polaris-gps/releases/latest) · Guía completa dentro de la aplicación con **F1**
+**Versión actual: 1.2.0** · [Descargar](https://github.com/mendikat/polaris-gps/releases/latest) · Guía completa dentro de la aplicación con **F1**
 
 ![Track circular con waypoints sobre el mapa topográfico del IGN](images/screen-capture-01.jpg)
 
@@ -21,7 +21,8 @@ _Un track circular por el Parque Nacional de Ordesa con sus waypoints (cimas, fu
 - **Ir** a un lugar por su nombre o a unas coordenadas (UTM o grados), y **medir** distancias y rumbos en el mapa.
 - **Enviar** el resultado a un GPS Garmin o TwoNav, o traer de él lo que has grabado.
 - **Convertir** a GPX archivos KML, KMZ, TCX, PLT, WPT y TRK, uno a uno o por lotes.
-- **Mendikat:** buscar una cumbre del catálogo de [mendikat.net](https://www.mendikat.net), subir tus tracks a las cumbres por las que pasan y crear cumbres nuevas desde tus waypoints, con tu cuenta de Mendikat o de Google.
+- **Mendikat:** buscar una cumbre del catálogo de [mendikat.net](https://www.mendikat.net), buscar tracks en la zona del mapa (donantes), subir tus tracks a las cumbres por las que pasan y crear cumbres nuevas desde tus waypoints, con tu cuenta de Mendikat o de Google.
+- **Ver el tiempo** previsto en la zona del mapa, por tramos de seis horas y para los próximos días.
 
 Está en español, català, euskara, français y português, y sigue el modo claro u oscuro de Windows.
 
@@ -36,7 +37,7 @@ _Perfil de elevación: distancia, desnivel, altitudes, tiempo total, en movimien
 3. Si falta el runtime de escritorio de .NET 10, el instalador lo instala (va incluido; no hace falta conexión).
 4. Elige el idioma, acepta la licencia y la carpeta de destino. Se instala para todos los usuarios y pide permisos de administrador.
 
-**Requisitos:** Windows 10 versión 2004 o posterior, o Windows 11, de 64 bits. Internet sólo hace falta para la cartografía en línea, el MDT del IGN, el seguimiento de caminos, las búsquedas de lugares y cumbres y Mendikat; abrir, editar y guardar archivos funciona sin conexión.
+**Requisitos:** Windows 10 versión 2004 o posterior, o Windows 11, de 64 bits. Internet sólo hace falta para la cartografía en línea, el MDT del IGN, el seguimiento de caminos, las búsquedas de lugares y cumbres, la previsión meteorológica y Mendikat; abrir, editar y guardar archivos funciona sin conexión.
 
 **Actualizar:** instala la versión nueva encima; sustituye a la anterior y conserva tu configuración. Al abrir la aplicación se comprueba si hay una nueva y, si la hay, aparece un aviso arriba a la derecha del mapa con **Descargar** (al cerrarlo ya no se avisa de esa versión; se desactiva en _Archivo › Configuración… › General_). También puedes comprobarlo en _Ayuda › Buscar actualizaciones_.
 
@@ -58,7 +59,7 @@ Un KML, KMZ, TCX, PLT, WPT o TRK se abre como un GPX nuevo sin guardar («ruta.k
 
 | Quiero…                                                   | Cómo                                                                                                                                              |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ver los puntos de un track, ruta o waypoints              | Seleccionarlo en **Capas**. Un track en varias partes lista sus segmentos: clic selecciona sus puntos y ✕ elimina ese segmento (con confirmación) |
+| Ver los puntos de un track, ruta o waypoints              | Seleccionarlo en **Capas**. Un track en varias partes lista sus segmentos: clic selecciona sus puntos, el botón de enlace lo une con el siguiente y ✕ elimina ese segmento (con confirmación) |
 | Seleccionar puntos                                        | Clic en la lista o en el mapa, cerca del punto. Ctrl o Mayús + clic en la lista para seleccionar varios                                           |
 | Mover un punto                                            | Seleccionarlo y arrastrarlo en el mapa, o cambiar latitud y longitud en el detalle y pulsar **Aplicar** (Intro)                                   |
 | Cambiar nombre, descripción, elevación u hora de un punto | Panel «Punto seleccionado» › **Aplicar**. **Descartar** (Esc) deshace lo escrito                                                                  |
@@ -71,7 +72,7 @@ El **clic derecho en el mapa** ofrece lo que tiene sentido en ese sitio: con un 
 
 ### Waypoints
 
-- **Añadir:** clic derecho en el mapa › **Añadir waypoint…**: nombre, comentario, descripción y **símbolo** (cima, collado, aparcamiento, refugio, fuente…). El símbolo se guarda como `sym` de Garmin y se dibuja con su icono. La **elevación** se propone según el terreno (tus MDT locales o el del IGN) y se puede cambiar, también al editarlo.
+- **Añadir:** clic derecho en el mapa › **Añadir waypoint…**: nombre, comentario, descripción y **símbolo** (cima, collado, aparcamiento, refugio, fuente…). Los símbolos se eligen en una cuadrícula con su icono; se guardan como `sym` de Garmin y se dibujan con ese icono en el mapa. La **elevación** se propone según el terreno (tus MDT locales o el del IGN) y se puede cambiar, también al editarlo.
 - **Editar o eliminar:** clic derecho sobre el waypoint, o **Supr** con él seleccionado (siempre con confirmación).
 - **Buscar por nombre:** con la capa de waypoints seleccionada, escribe en la casilla sobre la lista.
 - Los nombres que se solaparían en el mapa se ocultan hasta que te acercas.
@@ -104,6 +105,7 @@ Selecciona el track o ruta en **Capas** antes de usarlas. Las que piden opciones
 | **Partir en el punto seleccionado**              | Dividirlo en dos; el segundo empieza en una copia del punto y lleva « (2)» en el nombre                                                                                                                                                                                                                                    |
 | **Eliminar los puntos anteriores / posteriores** | Recortarlo para que empiece o termine en el punto seleccionado                                                                                                                                                                                                                                                             |
 | **Separar los segmentos en tracks**              | Hacer un track de cada segmento                                                                                                                                                                                                                                                                                            |
+| **Unir con el segmento anterior / siguiente**   | Con un punto seleccionado, unir su segmento con el de al lado en uno solo (también en el clic derecho del mapa) |
 
 ### Puntos anómalos
 
@@ -140,6 +142,12 @@ _Buscar › Buscar waypoints…_ (**Ctrl+Mayús+F**, también en el clic derecho
 ### Buscar una cumbre en Mendikat
 
 _Buscar › Buscar cumbre en Mendikat…_ busca por su nombre las cumbres del catálogo de [mendikat.net](https://www.mendikat.net) (necesita Internet; no hace falta cuenta). No hace falta escribirlo exacto ni con acentos: con «pena ubina» encuentra «Ubiña, Peña». Escribe al menos 3 letras y pulsa **Intro** o **Buscar**: se listan hasta diez cumbres con su altitud, y un clic en una lleva el mapa allí y la marca con un círculo rojo. **Ver en Mendikat** abre la ficha de la cumbre en el navegador.
+
+### Buscar tracks de Mendikat en la zona visible (donantes)
+
+_Buscar › Buscar tracks de Mendikat en la zona visible…_ (también en el clic derecho del mapa) lista los tracks de [mendikat.net](https://www.mendikat.net) que caben en la zona del mapa que estás viendo, los más descargados primero (hasta 200), con su cumbre, distancia, desnivel, fecha y autor. Marca los que quieras y pulsa **Abrir** (o doble clic): se descargan y se abren como documentos; **Guardar como** los guarda donde quieras. **Ver en Mendikat** abre su página en el navegador. Sobre la lista puedes filtrar por palabras del track o de la cumbre y por distancia y desnivel (desde y hasta), y ordenar por cualquier columna con un clic en su título. El mapa enmarca en rojo la zona de cada track de la lista; el que seleccionas se resalta y se dibuja su recorrido, y la ventana se coloca abajo para dejar el mapa a la vista.$
+
+Está disponible solo para los **donantes de Mendikat**, con la cuenta conectada en _Archivo › Configuración… › Cuenta de Mendikat_. Si no la tienes conectada o no eres donante, la aplicación te lo indica y te ofrece conectarla o hacer un donativo (se asocia a tu cuenta si donas desde PayPal con el mismo correo que tu cuenta de Mendikat). La zona no puede medir más de 1° de lado (unos 100 km): si es mayor, acerca el mapa.
 
 ### Tus propios mapas y MDT
 
@@ -193,6 +201,7 @@ _Archivo › Convertir a GPX…_: elige los KML, KMZ, TCX, PLT, WPT o TRK, la ca
 | **Coordenadas**        | Datum WGS84 (por defecto) o ED50 para la barra de estado, la lista de puntos, el detalle y la cuadrícula. ED50 sólo en los husos 29 a 31; los archivos se siguen guardando en WGS84 |
 | **Carpetas**           | Carpeta de mapas y carpeta de tracks para el menú _Buscar_                                                                                                                          |
 | **Cuenta de Mendikat** | Conectar con usuario y contraseña o con Google, y desconectar, para _Comunicaciones › Enviar a Mendikat_ y para crear cumbres desde waypoints. Se aplica al momento                 |
+| **Meteorología**       | Mostrar u ocultar la previsión meteorológica sobre el mapa (activada por defecto): arriba a la derecha, la previsión de Open-Meteo para el centro del mapa por tramos de seis horas (cielo, temperatura, probabilidad de precipitación y cota de nieve) y la mínima y máxima del día; las flechas laterales pasan a los días siguientes, hasta 7 |
 
 El modo claro u oscuro sigue al de Windows (_Configuración de Windows › Personalización › Colores_); el mapa no cambia.
 
@@ -217,7 +226,7 @@ El modo claro u oscuro sigue al de Windows (_Configuración de Windows › Perso
 
 ### Ayuda
 
-**F1** o _Ayuda › Ayuda de Polaris GPS_ abre la guía completa en el navegador, en el idioma de la aplicación. En el mismo menú: ¡Dona ahora! (PayPal), web de Mendikat, Buscar actualizaciones (no en la versión de Microsoft Store, que se actualiza desde la Store) y Acerca de.
+**F1** o _Ayuda › Ayuda de Polaris GPS_ abre la guía completa en el navegador, en el idioma de la aplicación. En el mismo menú: Primeros pasos (la ventana de bienvenida que sale la primera vez), ¡Dona ahora! (PayPal), web de Mendikat, Buscar actualizaciones (no en la versión de Microsoft Store, que se actualiza desde la Store) y Acerca de.
 
 ## Formatos admitidos
 
@@ -266,8 +275,9 @@ Polaris GPS no envía datos de uso a Mendikat ni a nadie, y a Mendikat sólo lo 
 - el **MDT del IGN**, para la altitud bajo el puntero y _Ajustar altitudes_;
 - el servidor de rutas **BRouter**, cuando dibujas con _Seguir caminos_;
 - la búsqueda **Nominatim** de OpenStreetMap, cuando buscas un lugar por su nombre (recibe el nombre escrito y la zona visible del mapa);
+- **Open-Meteo**, para la previsión meteorológica del mapa, si no la desactivas en _Archivo › Configuración… › Meteorología_ (recibe la posición del centro del mapa, redondeada a 1 km);
 - **GitHub**, al abrir la aplicación (se puede desactivar en _Archivo › Configuración… › General_) y cuando eliges _Ayuda › Buscar actualizaciones_, para saber si hay una versión nueva (no en la versión de Microsoft Store);
-- **mendikat.net**, cuando buscas una cumbre en Mendikat (recibe el texto que buscas), cuando conectas tu cuenta de Mendikat (recibe tu usuario y contraseña, o el permiso de tu cuenta de Google) y cuando eliges _Comunicaciones › Enviar a Mendikat_ (recibe la posición del track para buscar las cumbres próximas y el GPX que envías), y cuando envías un waypoint como cumbre nueva (recibe su nombre, su comentario, su altitud y su posición);
+- **mendikat.net**, cuando buscas una cumbre en Mendikat (recibe el texto que buscas), cuando buscas tracks de Mendikat en la zona visible (recibe los límites de la zona y comprueba con tu cuenta si eres donante), cuando conectas tu cuenta de Mendikat (recibe tu usuario y contraseña, o el permiso de tu cuenta de Google) y cuando eliges _Comunicaciones › Enviar a Mendikat_ (recibe la posición del track para buscar las cumbres próximas y el GPX que envías), y cuando envías un waypoint como cumbre nueva (recibe su nombre, su comentario, su altitud y su posición);
 - **Google**, cuando eliges **Conectar con Google** (el inicio de sesión se hace en tu navegador).
 
 Esos proveedores reciben las peticiones como en cualquier navegación web. El registro técnico se queda en tu equipo.
